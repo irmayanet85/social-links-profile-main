@@ -1,7 +1,18 @@
+
 @font-face {
-  font-family: Inter;
-  src: url(./assets/fonts/Inter-VariableFont_slnt,wght.ttf);
+  font-family: 'Inter';
+  src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
 }
 
 :root{
@@ -17,9 +28,10 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--color-Grey-900);
     color: var(--color-White);
+    font-weight: 400;
 }
 .container {
     display: flex;
@@ -29,7 +41,7 @@ body {
 }
 .card {
     background-color: var(--color-Grey-800);
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -54,32 +66,37 @@ body {
     width: 100%;
     height: 100%;
 }
-.card-tile {
+.card-title {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
     text-align: center;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 .text-center {
     text-align: center;
 }
 .card-subtitle {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     color: var(--color-Green);
 }
 .card-subtitle2 {
     margin-bottom: 20px;
-}	
-h3 {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
 }
-h4 {
-    font-size: 15px;
+.s-h1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}	
+.s-h3 {
+    font-size: 14px;
     font-weight: 400;
     line-height: 18px;
+}
+.s-h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
 }
 .card-body {
     display: flex;
@@ -88,9 +105,7 @@ h4 {
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-bottom: 38px;
+    padding: 0 38px 38px 38px;
 }
 .card-body-item {
     display: flex;
@@ -100,10 +115,16 @@ h4 {
     background-color: var(--color-Grey-700);
     width: 100%;
     height: 46px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .card-body-item:hover {
     background-color: var(--color-Green);
     color: var(--color-Grey-900);
+}
+@media (max-width: 376px){
+   .card {
+        width: 88%;
+    }
 }
