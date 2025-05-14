@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_slnt,wght.ttf);
+  font-weight: 400;
+}
+
+:root{
+    --color-Green: hsl(75, 94%, 57%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Grey-700: hsl(0, 0%, 20%);
+    --color-Grey-800: hsl(0, 0%, 12%);
+    --color-Grey-900: hsl(0, 0%, 8%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: var(--color-Grey-900);
+    color: var(--color-White);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    background-color: var(--color-Grey-800);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 382px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card__header {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.card__header_img {
+    max-width: 87px;
+    max-height: 87px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 39px;
+    margin-bottom: 33px;
+}
+.profile-image{
+    width: 100%;
+    height: 100%;
+}
+.card-tile {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.text-center {
+    text-align: center;
+}
+.card-subtitle {
+    margin-bottom: 28px;
+    color: var(--color-Green);
+}
+.card-subtitle2 {
+    margin-bottom: 20px;
+}	
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+h4 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 38px;
+}
+.card-body-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-Grey-700);
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-body-item:hover {
+    background-color: var(--color-Green);
+    color: var(--color-Grey-900);
+}
